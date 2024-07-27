@@ -1,0 +1,61 @@
+.app_navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #fff;
+    box-shadow: 10px 12px 20px rgba(0, 0, 0, 0.453);
+    width: 100%;
+    animation: navMoveDown 1s ease;
+}
+
+.app_navbar_logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.app_navbar_logo img{
+    width: 200px;
+}
+
+.app_navbar_logo:hover{
+    transform: scale(0.95);
+}
+
+.app_navbar_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app_navbar_links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.app_navbar_links a:hover{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+
+
+.app_navbar_smallscreen{
+    display: none;
+}
+
+@keyframes navMoveDown{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
