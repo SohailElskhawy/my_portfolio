@@ -1,0 +1,83 @@
+.app_skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 2rem;
+    gap: 1rem;
+    animation: FadeIn 1.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.app_skills_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.app_skills_languages_cont,
+.app_skills_frameworks_cont,
+.app_skills_databases_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 6rem;
+    border-radius: 5px;
+    animation: FadeFromLeft 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry;
+
+}
+
+
+.app_skills_ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.app_skills_ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.app_skills_ul li .li_icon{
+    font-size: 3rem;
+}
+
+
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

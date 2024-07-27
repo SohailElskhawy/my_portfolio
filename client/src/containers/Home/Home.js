@@ -8,7 +8,7 @@ import binaryVid from '../../assets/vecteezy_binary-code-with-numbers-moving-dow
 
 function Home() {
   return (
-    <div className="app_home" id='home'>
+    <div className="app_home">
       <div className="app_home_bg-video_cont">
         <video src={binaryVid} className='app_home_background-video' autoPlay loop muted></video>
       </div>

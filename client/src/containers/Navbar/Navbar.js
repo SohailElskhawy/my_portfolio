@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false)
   return (
-    <div className='app_navbar'>
+    <div className='app_navbar' id='home'>
       <div className="app_navbar_logo">
         <img src={myLogo} alt="SoCode" />
       </div>
