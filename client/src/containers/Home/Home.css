@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 8rem 2rem;
+    padding: 10.65rem 2rem;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -124,36 +124,3 @@
 
 
 
-@keyframes moveInLeftFade {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes FadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    75% {
-        width: 100%;
-    }
-    100% {
-        width: 100%; /* This holds the final state for the delay */
-    }
-}

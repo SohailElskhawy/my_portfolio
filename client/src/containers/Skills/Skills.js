@@ -2,12 +2,12 @@ import React from 'react'
 import './Skills.css'
 import { IoLogoPython } from "react-icons/io5";
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
-import { SiFlask, SiPostgresql, SiFirebase, SiJavascript, SiHtml5, SiCss3, SiCplusplus, SiCsharp, SiC } from "react-icons/si";
+import { SiFlask, SiPostgresql, SiFirebase, SiJavascript, SiHtml5, SiCss3, SiCplusplus, SiCsharp, SiC, SiExpress, SiElectron } from "react-icons/si";
 
 function Skills() {
   return (
     <div className='app_skills' id='skills'>
-      <h1>My Skills</h1>
+      <h1 className='app_skills_title'>My Skills</h1>
       <div className='app_skills_container'>
         <div className="app_skills_languages_cont">
           <h2>Languages</h2>
@@ -73,6 +73,13 @@ function Skills() {
                 React
               </p>
             </li>
+            <li><SiElectron className='li_icon'
+              color='#47848F'
+            />
+              <p>
+                Electron
+              </p>
+            </li>
             <li><SiFlask className='li_icon'
               color='#000000'
             />
@@ -85,6 +92,13 @@ function Skills() {
             />
               <p>
                 Node.js
+              </p>
+            </li>
+            <li><SiExpress className='li_icon'
+              color='#000000'
+            />
+              <p>
+                Express
               </p>
             </li>
           </ul>

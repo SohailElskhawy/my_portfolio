@@ -8,7 +8,7 @@ function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <div className='app_navbar' id='home'>
-      <div className="app_navbar_logo">
+      <div className="app_navbar_logo" onClick={()=>window.location.reload()}>
         <img src={myLogo} alt="SoCode" />
       </div>
       <div className="app_navbar_links">
