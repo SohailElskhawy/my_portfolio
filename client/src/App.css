@@ -145,3 +145,13 @@ body{
         transform: translateY(0);
     }
 }
+
+@keyframes FooterMoveUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

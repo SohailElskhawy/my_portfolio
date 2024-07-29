@@ -1,0 +1,159 @@
+.app_footer{
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100%;
+    color: #333;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.453);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: FooterMoveUp 1s ease;
+    animation-timeline: view();
+    animation-range: entry; 
+}
+
+.app_footer_logo_container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+
+}
+
+.logo_cont{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo_cont img{
+    width: 150px;
+}
+
+.logo_cont:hover{
+    transform: scale(0.95);
+}
+
+.app_footer_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app_footer_links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.app_footer_links a:hover{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+.app_footer_contact_container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.app_footer_social_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 45%;
+}
+
+.about-me_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+.about-me_container p{
+    word-wrap : break-word;
+}
+
+.socail_cont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+.app_home_hire-me_button,
+.app_home_download-cv_button
+{
+    padding: 10px 20px;
+    background-color: var(--green-logo-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+}
+
+.app_home_hire-me_button:hover,
+.app_home_download-cv_button:hover {
+    background-color: #0f6e3e;
+}
+
+.contact_icon{
+    color: #fff;
+    background-color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.contact p{
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact:hover .contact_icon{
+    color: #000;
+    background-color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+.contact:hover p{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+
+}
