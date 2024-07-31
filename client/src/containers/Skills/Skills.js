@@ -1,15 +1,29 @@
-import React from 'react'
 import './Skills.css'
 import { IoLogoPython } from "react-icons/io5";
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { SiFlask, SiPostgresql, SiFirebase, SiJavascript, SiHtml5, SiCss3, SiCplusplus, SiCsharp, SiC, SiExpress, SiElectron } from "react-icons/si";
+import { motion} from 'framer-motion'
+
 
 function Skills() {
+
+
+  
+
   return (
     <div className='app_skills' id='skills'>
-      <h1 className='app_skills_title'>My Skills</h1>
+      <motion.h1 className='app_skills_title' 
+        initial={{opacity: 0, y: -10}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 1}}
+        
+      >My Skills</motion.h1>
       <div className='app_skills_container'>
-        <div className="app_skills_languages_cont">
+        <motion.div className="app_skills_languages_cont"
+                    initial={{opacity: 0, x: -25}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{duration: 1}}
+        >
           <h2>Languages</h2>
           <ul className='app_skills_ul'>
             <li><SiJavascript className='li_icon'
@@ -62,8 +76,12 @@ function Skills() {
               </p>
             </li>
           </ul>
-        </div>
-        <div className="app_skills_frameworks_cont">
+        </motion.div>
+        <motion.div className="app_skills_frameworks_cont" 
+          initial={{opacity: 0, x: 25}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 1}}
+        >
           <h2>Frameworks</h2>
           <ul className='app_skills_ul'>
             <li><FaReact className='li_icon'
@@ -102,8 +120,12 @@ function Skills() {
               </p>
             </li>
           </ul>
-        </div>
-        <div className="app_skills_databases_cont">
+        </motion.div>
+        <motion.div className="app_skills_databases_cont"
+        initial={{opacity: 0, x: -25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        >
           <h2>Databases</h2>
           <ul className='app_skills_ul'>
             <li><SiPostgresql className='li_icon'
@@ -128,7 +150,7 @@ function Skills() {
               </p>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

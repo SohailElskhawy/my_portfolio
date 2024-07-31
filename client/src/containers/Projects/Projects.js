@@ -7,6 +7,7 @@ import { flyToSchoolScreens } from '../../assets'
 import { htmlCssJsProjects } from '../../assets'
 import { pythonProjects } from '../../assets'
 import { reactProjects } from '../../assets'
+import { motion} from 'framer-motion'
 
 function Projects() {
 
@@ -17,9 +18,18 @@ function Projects() {
 
   return (
     <div className='app_projects' id='projects'>
-      <h1 className='app_projects_title'>Here are some of the projects I have worked on:</h1>
+      <motion.h1 className='app_projects_title'
+      initial={{opacity: 0, y: -10}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{duration: 1}}
+      >Here are some of the projects I have worked on:</motion.h1>
       <div className="app_projects_project">
-        <div className="app_projects_project_images">
+        <motion.div className="app_projects_project_images"
+        initial={{opacity: 0, x: -25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        
+        >
           <div className="project_img_cont">
             {
               dunyaAmbalajScreens.map((image, index) => {
@@ -40,8 +50,13 @@ function Projects() {
               )
             }
           </div>
-        </div>
-        <div className="app_projects_project_info">
+        </motion.div>
+        <motion.div className="app_projects_project_info"
+        initial={{opacity: 0, x: 25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        
+        >
           <h2>
             Dunya Ambalaj Paper Storage System
           </h2>
@@ -58,10 +73,14 @@ function Projects() {
           <p>Skills:
             HTML, CSS, JS, Electron, Firebase, Node.js,
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="app_projects_project">
-        <div className="app_projects_project_images">
+        <motion.div className="app_projects_project_images"
+        initial={{opacity: 0, x: -25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        >
           <div className="project_img_cont">
             {
               borcumNeScreens.map((image, index) => {
@@ -84,8 +103,12 @@ function Projects() {
           </div>
 
 
-        </div>
-        <div className="app_projects_project_info">
+        </motion.div>
+        <motion.div className="app_projects_project_info"
+        initial={{opacity: 0, x: 25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        >
           <h2>Borcum Ne ?</h2>
           <ol type='1'>
             <li>
@@ -114,10 +137,14 @@ function Projects() {
           <p>Skills:
             React, Express, Node.js, Firebase
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="app_projects_project">
-        <div className="app_projects_project_images flytoschool">
+        <motion.div className="app_projects_project_images flytoschool"
+        initial={{opacity: 0, x: -25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        >
           <div className="project_img_cont">
             {
               flyToSchoolScreens.map((image, index) => {
@@ -138,8 +165,12 @@ function Projects() {
               )
             }
           </div>
-        </div>
-        <div className="app_projects_project_info">
+        </motion.div>
+        <motion.div className="app_projects_project_info"
+        initial={{opacity: 0, x: 25}}
+        whileInView={{opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        >
           <h2>Fly To School</h2>
           <h3>
             My First Game And Project.
@@ -157,18 +188,26 @@ function Projects() {
           <p>Skills:
             C#, Unity
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="app_projects_project collection">
-        <h1>HTML CSS JS Projects</h1>
+        <motion.h1 
+        initial={{opacity: 0, y: -25}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 1.5}}
+        >HTML CSS JS Projects</motion.h1>
         <div className="projects_container">
           {
             htmlCssJsProjects.map((project, index) => {
               return (
-                <div key={index} className='project'>
+                <motion.div key={index} className='project' 
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 1}}
+                >
                   <img src={project.img} alt='project_img' />
                   <h3>{project.name}</h3>
-                </div>
+                </motion.div>
               )
 
             })
@@ -176,15 +215,23 @@ function Projects() {
         </div>
       </div>
       <div className="app_projects_project collection">
-        <h1>Python Projects</h1>
+        <motion.h1
+        initial={{opacity: 0, y: -25}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 1.5}}
+        >Python Projects</motion.h1>
         <div className="projects_container">
           {
             pythonProjects.map((project, index) => {
               return (
-                <div key={index} className='project'>
+                <motion.div key={index} className='project'
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 1}}
+                >
                   <img src={project.img} alt='project_img' />
                   <h3>{project.name}</h3>
-                </div>
+                </motion.div>
               )
 
             })
@@ -192,15 +239,23 @@ function Projects() {
         </div>
       </div>
       <div className="app_projects_project collection">
-        <h1>React Projects</h1>
+        <motion.h1
+        initial={{opacity: 0, y: -25}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 1.5}}
+        >React Projects</motion.h1>
         <div className="projects_container">
           {
             reactProjects.map((project, index) => {
               return (
-                <div key={index} className='project'>
+                <motion.div key={index} className='project' 
+                initial={{opacity: 0, y: -50}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 1}}
+                >
                   <img src={project.img} alt='project_img' />
                   <h3>{project.name}</h3>
-                </div>
+                </motion.div>
               )
 
             })
