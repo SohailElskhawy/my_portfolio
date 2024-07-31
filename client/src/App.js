@@ -8,17 +8,23 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('load', () => {
+    const handleLoad = () => {
       setLoading(false);
-    });
+    };
+
+    if (document.readyState === 'complete') {
+      // If the document is already loaded
+      setLoading(false);
+    } else {
+      // Otherwise, add an event listener
+      window.addEventListener('load', handleLoad);
+    }
 
     return () => {
-      window.removeEventListener('load', () => {
-        setLoading(false);
-      });
-    }
-  }, [loading]);
-  
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
@@ -27,9 +33,7 @@ function App() {
       <Projects />
       <ScrollToTop />
       <Footer />
-
       {loading && <Preloader />}
-      
     </div>
   );
 }
