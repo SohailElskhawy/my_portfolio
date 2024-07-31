@@ -17,7 +17,7 @@
 }
 
 .app_navbar_logo img{
-    width: 200px;
+    width: 190px;
 }
 
 .app_navbar_logo:hover{
@@ -50,3 +50,111 @@
     display: none;
 }
 
+.app_navbar_smallscreen_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    color: var(--green-logo-color);
+    animation: menuOpen 1s ease;
+    transition: visibility 1s ease;
+}
+
+.app_navbar_smallscreen_menu.close {
+    animation: menuClose 1s ease;
+    visibility: hidden;
+
+}
+
+
+.app_navbar_smallscreen_menu_header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.app_navbar_smallscreen_menu img{
+    width: 120px;
+}
+
+.app_navbar_smallscreen_menu_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app_navbar_smallscreen_menu_links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.app_navbar_smallscreen_menu_links a:hover{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+.close_icon{
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close_icon:hover{
+    color: var(--green-logo-color);
+    transform: translateY(-5px);
+}
+
+
+@media screen and (min-width: 2000px) {
+    .app_navbar_logo img{
+        width: 170px;
+    }
+
+
+}
+
+@media screen and (max-width: 1150px) {
+    .app_navbar_logo img{
+        width: 150px;
+    }
+
+    .app_navbar_links{
+        display: none;
+    }
+
+    .app_navbar_smallscreen{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .app_navbar_logo img{
+        width: 120px;
+    }
+
+    .app_navbar_links{
+        display: none;
+    }
+
+    .app_navbar_smallscreen{
+        display: flex;
+    }
+
+
+}

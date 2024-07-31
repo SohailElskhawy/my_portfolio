@@ -123,7 +123,7 @@ export const htmlCssJsProjects = [
         img: htmlCssJs4
     },
     {
-        name: 'Math Game',
+        name: 'Math Quiz Game',
         img: htmlCssJs5
     },
     {
@@ -131,11 +131,11 @@ export const htmlCssJsProjects = [
         img: htmlCssJs6
     },
     {
-        name: 'Pomodoro',
+        name: 'Pomodoro Timer',
         img: htmlCssJs7
     },
     {
-        name: 'Quote',
+        name: 'Quote App',
         img: htmlCssJs8
     },
     {

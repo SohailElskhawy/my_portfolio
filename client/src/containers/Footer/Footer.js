@@ -24,7 +24,7 @@ function Footer() {
         </p>
         </div>
         <div className="app_footer_contact_container">
-          <a className="contact" href="tel:+905528509969">
+          <a className="contact" href="https://wa.me/905528509969">
             <GiPhone fontSize={25} className='contact_icon'/>
             <p>+90 552 850 9969</p>
           </a>
@@ -52,7 +52,6 @@ function Footer() {
               <FaXTwitter fontSize={21} className='icon'/>
             </a>
             <a href="mailto:sohailelskhawy@gmail.com" className='app_home_hire-me_button'>Hire Me</a>
-            <button className='app_home_download-cv_button'>Download CV</button>
           </div>
         </div>
       </div>

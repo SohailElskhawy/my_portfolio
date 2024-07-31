@@ -42,6 +42,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project_img:hover{
+    transform: scale(1.1);
 }
 
 
@@ -52,6 +58,7 @@
 
 .images_change_bar{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -131,11 +138,23 @@
     animation: FadeFromTop 2s ease-in-out;
     animation-timeline: view();
     animation-range: entry;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
+
+
 .project img{
     width: 100%;
     height: 100%;
     border-radius: 5px;
+
+}
+
+.project:hover{
+    transform: scale(1.2);
+    z-index: 5;
+
 }
 
 
@@ -143,3 +162,50 @@
     width: 200px;
 }
 
+@media screen and (min-width: 2000px) {
+    .app_projects_project{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app_projects_project{
+        flex-direction: column;
+    }
+
+    .project_img_cont{
+        width: 400px;
+    }
+
+    .app_projects_project_images.flytoschool .project_img_cont{
+        width: 170px;
+    }
+
+    .app_projects_title{
+        font-size: 2rem;
+    }
+
+    .app_projects_project_info ol li{
+        text-overflow: clip;
+        overflow: visible;
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app_projects_project{
+        flex-direction: column;
+    }
+
+    .project_img_cont{
+        width: 300px;
+    }
+
+    .app_projects_project_images.flytoschool .project_img_cont{
+        width: 150px;
+    }
+
+    .app_projects_title{
+        font-size: 1.5rem;
+    }
+}

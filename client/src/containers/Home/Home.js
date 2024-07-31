@@ -1,5 +1,5 @@
 import './Home.css'
-import profilePic from '../../assets/newSohailImgjpg.jpg'
+import profilePic from '../../assets/profile_pic.jpg'
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import binaryVid from '../../assets/vecteezy_binary-code-with-numbers-moving-downward-on-screen_2015336.webm'
@@ -29,15 +29,14 @@ function Home() {
         <div className="app_home_content_contact">
           <div className="app_home_social">
             <a href="https://github.com/SohailElskhawy">
-              <FaGithub  fontSize={21} className='icon'/>
+              <FaGithub   className='icon'/>
             </a>
             <a href="https://twitter.com/sohail_elskhawy">
-              <FaXTwitter fontSize={21} className='icon'/>
+              <FaXTwitter  className='icon'/>
             </a>
           </div>
           <div className="app_home_hire-me">
             <a href="mailto:sohailelskhawy@gmail.com" className='app_home_hire-me_button'>Hire Me</a>
-            <button className='app_home_download-cv_button'>Download CV</button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import './App.css';
 import { Footer, Home, Navbar, Projects, Skills } from './containers';
 import Preloader from './components/Preloader';
 import { useState, useEffect } from 'react';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
       <Home />
       <Skills />
       <Projects />
+      <ScrollToTop />
       <Footer />
 
       {loading && <Preloader />}

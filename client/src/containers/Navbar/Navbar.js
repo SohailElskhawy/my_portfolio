@@ -2,6 +2,8 @@ import {useState} from 'react'
 import './Navbar.css'
 import myLogo from '../../assets/so softwear development-02.png'
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from "react-icons/io5";
+
 
 
 function Navbar() {
@@ -21,23 +23,31 @@ function Navbar() {
         <GiHamburgerMenu  
           color="#000" 
           fontSize={27} 
-          onClick={() => setToggleMenu(true)} 
+          onClick={() => setToggleMenu(true)}
+          className='burger_menu'
         />
-        {
-          toggleMenu && (
-            <div className="app_navbar_smallscreen_menu">
+          <div className={`app_navbar_smallscreen_menu ${toggleMenu ? '' : 'close'}`}
+              onAnimationEnd={(e) => {
+                    if (e.animationName === 'menuClose') {
+                        setToggleMenu(false);
+                    }
+                }}
+            >
+              <div className="app_navbar_smallscreen_menu_header">
+                <img src={myLogo} alt="logo" />
+                <IoClose 
+                  fontSize={27} 
+                  onClick={() => setToggleMenu(false)}
+                  className='icon close_icon'
+                />
+              </div>
+              <div className="app_navbar_smallscreen_menu_links">
               <a href="#home" onClick={() => setToggleMenu(false)}>Home</a>
               <a href="#skills" onClick={() => setToggleMenu(false)}>Skills</a>
               <a href="#projects" onClick={() => setToggleMenu(false)}>Projects</a>
               <a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a>
-              <GiHamburgerMenu 
-                color="#000" 
-                fontSize={27} 
-                onClick={() => setToggleMenu(false)} 
-              />
+              </div>
             </div>
-          )
-        }
       </div>
     </div>
   )

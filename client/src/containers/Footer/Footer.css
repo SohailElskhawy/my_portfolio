@@ -63,6 +63,7 @@
     align-items: start;
     justify-content: start;
     gap: 10px;
+    margin: 0 1rem;
 }
 
 .contact{
@@ -79,7 +80,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 45%;
 }
 
 .about-me_container{
@@ -102,7 +102,7 @@
     gap: 10px;
 }
 
-.icon {
+.socail_cont .icon {
     color: #000;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -112,8 +112,7 @@
     transform: translateY(-5px);
 }
 
-.app_home_hire-me_button,
-.app_home_download-cv_button
+.app_home_hire-me_button
 {
     padding: 10px 20px;
     background-color: var(--green-logo-color);
@@ -126,8 +125,7 @@
     font-family: "Quicksand", sans-serif;
 }
 
-.app_home_hire-me_button:hover,
-.app_home_download-cv_button:hover {
+.app_home_hire-me_button:hover {
     background-color: #0f6e3e;
 }
 
@@ -155,5 +153,34 @@
 .contact:hover p{
     color: var(--green-logo-color);
     transform: translateY(-5px);
+}
 
+@media screen and (min-width: 2000px) {
+    .app_footer{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app_footer{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .logo_cont img{
+        width: 100px;
+    }
+
+
+}
+
+@media screen and (max-width: 650px) {
+    .app_footer{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .logo_cont img{
+        width: 80px;
+    }
 }
