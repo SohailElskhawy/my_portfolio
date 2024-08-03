@@ -1,5 +1,5 @@
 import './Home.css'
-import profilePic from '../../assets/profile_pic.jpg'
+import profilePic from '../../assets/profile-pic-bg.jpg'
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import binaryVid from '../../assets/vecteezy_binary-code-with-numbers-moving-downward-on-screen_2015336.webm'
